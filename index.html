@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>電商神助手 - 學員專屬大禮包</title>
+  <meta name="description" content="電商神助手講師大軍整理的電商實用 AI 工具總表，中英雙語。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <span class="brand">🎁 <span data-i18n="brand">電商神助手</span></span>
+        <button id="langBtn" class="lang-btn" type="button" aria-label="Switch language">EN</button>
+      </div>
+      <p class="eyebrow" data-i18n="eyebrow">學員專屬大禮包</p>
+      <h1 data-i18n="title">電商神助手 - 學員專屬大禮包</h1>
+      <p class="lead" data-i18n="lead">講師大軍精選的電商實用 AI 工具總表。從文案、商品圖、短影音到自動化客服，每個工具都附上「電商怎麼用」，幫你省時間、多賺錢。</p>
+      <div class="meta">
+        <span>👨‍🏫 <span data-i18n="instructor">講師：大軍</span></span>
+        <span>🧰 <span id="toolCount"></span></span>
+        <span>🕒 <span id="lastUpdated"></span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="controls">
+      <input id="search" type="search" autocomplete="off" placeholder="搜尋工具、用途…">
+      <div id="chips" class="chips" role="tablist"></div>
+    </div>
+    <p id="empty" class="empty" hidden data-i18n="empty">找不到符合的工具，換個關鍵字試試。</p>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p data-i18n="footer1">© 電商神助手．講師 大軍．本大禮包僅供學員學習使用。</p>
+      <p class="muted" data-i18n="footer2">價格與功能以各工具官網為準，本表會持續更新。</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

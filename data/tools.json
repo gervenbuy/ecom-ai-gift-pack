@@ -1,0 +1,244 @@
+{
+  "categories": [
+    { "id": "chat", "zh": "AI 對話助理", "en": "AI Assistants", "icon": "💬" },
+    { "id": "writing", "zh": "文案與翻譯", "en": "Copy & Translation", "icon": "✍️" },
+    { "id": "image", "zh": "商品圖與設計", "en": "Images & Design", "icon": "🎨" },
+    { "id": "video", "zh": "影片製作", "en": "Video", "icon": "🎬" },
+    { "id": "audio", "zh": "配音與音樂", "en": "Voice & Music", "icon": "🎙️" },
+    { "id": "docs", "zh": "簡報與知識整理", "en": "Slides & Research", "icon": "📑" },
+    { "id": "automation", "zh": "自動化與客服", "en": "Automation & Support", "icon": "⚙️" }
+  ],
+  "pricing": {
+    "free": { "zh": "免費", "en": "Free" },
+    "freemium": { "zh": "免費＋付費方案", "en": "Freemium" },
+    "paid": { "zh": "付費", "en": "Paid" },
+    "opensource": { "zh": "開源可自架", "en": "Open source" }
+  },
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "category": "chat",
+      "url": "https://chatgpt.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "OpenAI 推出的全能對話 AI，能寫作、分析資料、看圖、生成圖片。", "use": "寫商品描述、發想行銷活動、回覆顧客範本、分析銷售表格。" },
+      "en": { "summary": "OpenAI's all-round AI assistant for writing, data analysis, vision and image generation.", "use": "Draft product descriptions, brainstorm campaigns, write reply templates, analyze sales sheets." }
+    },
+    {
+      "name": "Claude",
+      "category": "chat",
+      "url": "https://claude.ai",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "Anthropic 推出的 AI 助理，擅長長文閱讀、細膩寫作與程式，也能直接做出網頁。", "use": "整理長篇市調與評論、寫品牌故事、做活動頁與小工具。" },
+      "en": { "summary": "Anthropic's AI assistant, strong at long documents, nuanced writing and coding; can build web pages.", "use": "Digest long reviews and research, write brand stories, build landing pages and mini tools." }
+    },
+    {
+      "name": "Gemini",
+      "category": "chat",
+      "url": "https://gemini.google.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "Google 的 AI 助理，與 Gmail、雲端硬碟、YouTube 等 Google 服務深度整合。", "use": "整理信件與文件、研究競品、搭配 Google 試算表做報表。" },
+      "en": { "summary": "Google's AI assistant, deeply integrated with Gmail, Drive, YouTube and other Google apps.", "use": "Sort emails and docs, research competitors, build reports with Google Sheets." }
+    },
+    {
+      "name": "Perplexity",
+      "category": "chat",
+      "url": "https://www.perplexity.ai",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "附上資料來源的 AI 搜尋引擎，回答時會列出引用網址。", "use": "快速做市場調查、查法規與平台政策、找熱門選品趨勢。" },
+      "en": { "summary": "AI answer engine that cites its sources with links.", "use": "Fast market research, checking regulations and platform policies, spotting product trends." }
+    },
+    {
+      "name": "Microsoft Copilot",
+      "category": "chat",
+      "url": "https://copilot.microsoft.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "微軟的 AI 助理，可整合 Word、Excel、PowerPoint 與 Outlook。", "use": "用 Excel 分析訂單、快速產出報價單與簡報。" },
+      "en": { "summary": "Microsoft's AI assistant, integrated with Word, Excel, PowerPoint and Outlook.", "use": "Analyze orders in Excel, produce quotes and decks quickly." }
+    },
+    {
+      "name": "Notion AI",
+      "category": "writing",
+      "url": "https://www.notion.com/product/ai",
+      "pricing": "paid",
+      "updated": "2026-10-03",
+      "zh": { "summary": "內建在 Notion 筆記與資料庫中的 AI，可寫作、摘要、整理資料。", "use": "管理商品資料庫、內容行事曆、SOP 文件並自動摘要。" },
+      "en": { "summary": "AI built into Notion notes and databases for writing, summarizing and organizing.", "use": "Run product databases, content calendars and SOPs with auto-summaries." }
+    },
+    {
+      "name": "Copy.ai",
+      "category": "writing",
+      "url": "https://www.copy.ai",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "專為行銷文案設計的 AI 寫作平台，內建多種模板與工作流程。", "use": "批量產生廣告標題、EDM、商品賣點文案。" },
+      "en": { "summary": "AI writing platform built for marketing copy, with templates and workflows.", "use": "Bulk-generate ad headlines, email campaigns and product selling points." }
+    },
+    {
+      "name": "DeepL",
+      "category": "writing",
+      "url": "https://www.deepl.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "以自然流暢著稱的 AI 翻譯工具，支援文件整份翻譯。", "use": "跨境電商的商品頁、說明書與客服訊息多語翻譯。" },
+      "en": { "summary": "AI translator known for natural, fluent output; translates whole documents.", "use": "Translate product pages, manuals and support messages for cross-border selling." }
+    },
+    {
+      "name": "Canva",
+      "category": "image",
+      "url": "https://www.canva.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "人人都會用的線上設計工具，內建 Magic Studio AI 生圖、去背、改尺寸。", "use": "做商品主圖、社群貼文、Banner，一鍵改成各平台尺寸。" },
+      "en": { "summary": "Easy online design tool with Magic Studio AI: image generation, background removal, resizing.", "use": "Create product images, social posts and banners; resize for every platform in one click." }
+    },
+    {
+      "name": "Photoroom",
+      "category": "image",
+      "url": "https://www.photoroom.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "專為電商打造的商品照 AI 工具，去背、換背景、批次處理。", "use": "手機拍商品就能做出白底圖與情境圖，批次修圖上架。" },
+      "en": { "summary": "AI product-photo tool made for e-commerce: background removal, AI backgrounds, batch edits.", "use": "Turn phone shots into white-background and lifestyle images, batch-edit for listings." }
+    },
+    {
+      "name": "Midjourney",
+      "category": "image",
+      "url": "https://www.midjourney.com",
+      "pricing": "paid",
+      "updated": "2026-10-03",
+      "zh": { "summary": "畫面質感極高的 AI 繪圖工具，適合做氛圍感視覺。", "use": "品牌形象圖、活動主視覺、商品情境靈感。" },
+      "en": { "summary": "AI image generator with exceptional aesthetic quality.", "use": "Brand imagery, campaign key visuals, product mood inspiration." }
+    },
+    {
+      "name": "Adobe Firefly",
+      "category": "image",
+      "url": "https://firefly.adobe.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "Adobe 的生成式 AI，以可商用授權素材訓練，並整合 Photoshop。", "use": "需要商用安心的廣告素材、用生成填色延伸或修改商品圖。" },
+      "en": { "summary": "Adobe's generative AI trained on licensed content, integrated with Photoshop.", "use": "Commercially safe ad assets; extend or edit product photos with Generative Fill." }
+    },
+    {
+      "name": "Ideogram",
+      "category": "image",
+      "url": "https://ideogram.ai",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "擅長在圖片中正確排出文字的 AI 繪圖工具。", "use": "做含標語的促銷海報、優惠券、社群圖卡。" },
+      "en": { "summary": "AI image generator that renders text inside images accurately.", "use": "Promo posters, coupons and social cards with slogans." }
+    },
+    {
+      "name": "CapCut 剪映",
+      "category": "video",
+      "url": "https://www.capcut.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "熱門短影音剪輯工具，有自動字幕、AI 配音、模板與去背。", "use": "快速剪出 Reels、抖音、蝦皮短影音商品介紹。" },
+      "en": { "summary": "Popular short-video editor with auto captions, AI voice, templates and background removal.", "use": "Quickly edit Reels, TikTok and marketplace product videos." }
+    },
+    {
+      "name": "HeyGen",
+      "category": "video",
+      "url": "https://www.heygen.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "AI 數位人影片工具，輸入文字就能讓虛擬主播說話，也能翻譯配音對嘴。", "use": "不露臉也能做商品講解影片，一支影片翻成多國語言。" },
+      "en": { "summary": "AI avatar video tool: type a script and an avatar presents it; also lip-synced video translation.", "use": "Make product explainers without filming yourself; localize one video into many languages." }
+    },
+    {
+      "name": "Runway",
+      "category": "video",
+      "url": "https://runwayml.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "專業級 AI 影片生成與編輯平台，可文字或圖片生成影片。", "use": "把商品照變成動態廣告片、製作吸睛的開場畫面。" },
+      "en": { "summary": "Pro-grade AI video generation and editing from text or images.", "use": "Turn product photos into motion ads and eye-catching intros." }
+    },
+    {
+      "name": "Kling 可靈",
+      "category": "video",
+      "url": "https://klingai.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "快手推出的 AI 影片生成工具，人物動作與畫面真實度高。", "use": "產生模特兒穿搭、商品使用情境短片。" },
+      "en": { "summary": "Kuaishou's AI video generator with realistic motion and people.", "use": "Generate model try-on and product-in-use clips." }
+    },
+    {
+      "name": "ElevenLabs",
+      "category": "audio",
+      "url": "https://elevenlabs.io",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "自然逼真的 AI 配音與聲音複製工具，支援多國語言。", "use": "為商品影片、廣告與 Podcast 配上專業旁白。" },
+      "en": { "summary": "Lifelike AI voiceover and voice cloning in many languages.", "use": "Add professional narration to product videos, ads and podcasts." }
+    },
+    {
+      "name": "Suno",
+      "category": "audio",
+      "url": "https://suno.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "輸入描述或歌詞就能生成完整歌曲的 AI 音樂工具。", "use": "做品牌主題曲、短影音背景音樂（商用請選付費方案）。" },
+      "en": { "summary": "AI music generator that creates full songs from a prompt or lyrics.", "use": "Brand jingles and short-video background music (use a paid plan for commercial use)." }
+    },
+    {
+      "name": "Gamma",
+      "category": "docs",
+      "url": "https://gamma.app",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "輸入大綱就能自動生成精美簡報、文件或網頁的 AI 工具。", "use": "做提案簡報、品牌介紹、簡易活動頁。" },
+      "en": { "summary": "AI that turns an outline into polished slides, docs or web pages.", "use": "Pitch decks, brand intros and simple campaign pages." }
+    },
+    {
+      "name": "NotebookLM",
+      "category": "docs",
+      "url": "https://notebooklm.google.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "Google 的 AI 研究筆記本，上傳資料後只根據你的資料回答，還能生成語音摘要。", "use": "整理供應商資料、課程筆記、顧客評論重點。" },
+      "en": { "summary": "Google's AI research notebook that answers only from your uploaded sources, with audio overviews.", "use": "Organize supplier docs, course notes and key points from customer reviews." }
+    },
+    {
+      "name": "Zapier",
+      "category": "automation",
+      "url": "https://zapier.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "串接數千種 App 的自動化平台，內建 AI 步驟，不用寫程式。", "use": "新訂單自動通知、表單名單自動進 CRM、AI 自動分類客訴。" },
+      "en": { "summary": "No-code automation connecting thousands of apps, with built-in AI steps.", "use": "Auto order alerts, form leads into CRM, AI triage of complaints." }
+    },
+    {
+      "name": "Make",
+      "category": "automation",
+      "url": "https://www.make.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "視覺化拖拉的自動化平台，流程彈性高、價格親民。", "use": "串接商店、試算表與 AI，自動產生商品文案或報表。" },
+      "en": { "summary": "Visual drag-and-drop automation platform, flexible and affordable.", "use": "Connect your store, spreadsheets and AI to auto-generate copy or reports." }
+    },
+    {
+      "name": "n8n",
+      "category": "automation",
+      "url": "https://n8n.io",
+      "pricing": "opensource",
+      "updated": "2026-10-03",
+      "zh": { "summary": "開源的自動化與 AI Agent 工作流程工具，可自架或用雲端版。", "use": "打造自己的 AI 客服、自動上架與庫存同步流程。" },
+      "en": { "summary": "Open-source workflow automation and AI agent builder; self-host or use the cloud.", "use": "Build your own AI support bot, auto-listing and inventory sync flows." }
+    },
+    {
+      "name": "ManyChat",
+      "category": "automation",
+      "url": "https://manychat.com",
+      "pricing": "freemium",
+      "updated": "2026-10-03",
+      "zh": { "summary": "Instagram、Facebook Messenger 等平台的聊天機器人工具，支援 AI 回覆。", "use": "留言自動私訊、24 小時自動回覆詢價、收集名單。" },
+      "en": { "summary": "Chatbot builder for Instagram, Facebook Messenger and more, with AI replies.", "use": "Auto-DM commenters, answer inquiries 24/7, collect leads." }
+    }
+  ]
+}
