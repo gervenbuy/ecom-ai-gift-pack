@@ -239,6 +239,15 @@
       "updated": "2026-10-03",
       "zh": { "summary": "Instagram、Facebook Messenger 等平台的聊天機器人工具，支援 AI 回覆。", "use": "留言自動私訊、24 小時自動回覆詢價、收集名單。" },
       "en": { "summary": "Chatbot builder for Instagram, Facebook Messenger and more, with AI replies.", "use": "Auto-DM commenters, answer inquiries 24/7, collect leads." }
+    },
+    {
+      "name": "RunningHub｜MV 自動工作流",
+      "category": "video",
+      "url": "https://www.runninghub.ai/ai-detail-mobile/2098595092817772545",
+      "pricing": "freemium",
+      "updated": "2026-10-04",
+      "zh": { "summary": "RunningHub 是雲端 ComfyUI 平台，不用裝顯卡就能在瀏覽器一鍵執行別人做好的 AI 工作流；這個工作流可自動產出音樂 MV，據作者說跑一次成本約新台幣 5 元。", "use": "把歌曲或品牌主題曲快速做成 MV 短片，當新品宣傳、Reels／短影音素材。" },
+      "en": { "summary": "RunningHub is a cloud ComfyUI platform that runs ready-made AI workflows in the browser, no GPU needed; this workflow auto-generates music videos, about NT$5 per run according to its author.", "use": "Turn a song or brand jingle into an MV-style clip for launches, Reels and short-form ads." }
     }
   ]
 }
