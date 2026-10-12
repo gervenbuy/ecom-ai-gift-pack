@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>剪映自動剪輯 Skill 教學｜電商神助手</title>
+  <meta name="description" content="用 Claude + 剪映專業版，一句話自動生成剪輯草稿的安裝與使用工作流。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .hero { padding-bottom: 36px; }
+    .back { color: #fff; text-decoration: none; font-weight: 700; }
+    .back:hover { text-decoration: underline; }
+    .doc { max-width: 820px; padding-top: 28px; padding-bottom: 48px; }
+    .doc section {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow);
+    }
+    .doc h2 { margin: 0 0 10px; font-size: 1.25rem; }
+    .doc h3 { margin: 18px 0 6px; font-size: 1.02rem; }
+    .doc p, .doc li { margin: 6px 0; }
+    .doc ul, .doc ol { padding-left: 1.3em; margin: 6px 0; }
+    .step-no {
+      display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+      border-radius: 50%; background: var(--brand); color: #fff; font-size: .9rem; margin-right: 8px;
+    }
+    pre {
+      margin: 8px 0; padding: 12px 14px; border-radius: 10px; overflow-x: auto;
+      background: #1c1b2b; color: #f3f3f8; font-size: .85rem; line-height: 1.55;
+    }
+    code { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+    p code, li code { background: var(--bg); padding: 1px 6px; border-radius: 6px; font-size: .88em; }
+    .note { padding: 10px 14px; border-radius: 10px; background: var(--accent-bg); border-left: 4px solid var(--brand); }
+    .ok { padding: 10px 14px; border-radius: 10px; background: var(--bg); }
+    .doc .flow { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0; padding: 0; list-style: none; }
+    .doc .flow li {
+      margin: 0; padding: 6px 12px; border-radius: 999px; font-size: .9rem; font-weight: 500;
+      background: var(--bg); border: 1px solid var(--border);
+    }
+    [data-lang] { display: none; }
+    html[lang="zh-Hant"] [data-lang="zh"], html[lang="en"] [data-lang="en"] { display: block; }
+    html[lang="zh-Hant"] span[data-lang="zh"], html[lang="en"] span[data-lang="en"] { display: inline; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topbar">
+        <a class="back" href="../"><span data-lang="zh">← 回大禮包總表</span><span data-lang="en">← Back to gift pack</span></a>
+        <button id="langBtn" class="lang-btn" type="button" aria-label="Switch language">EN</button>
+      </div>
+      <p class="eyebrow"><span data-lang="zh">自動剪輯工作流</span><span data-lang="en">Auto-editing workflow</span></p>
+      <h1><span data-lang="zh">剪映自動剪輯 Skill 教學</span><span data-lang="en">JianYing Auto-Editing Skill Guide</span></h1>
+      <p class="lead" data-lang="zh">讓 Claude 用一句話，把資料夾裡的素材自動排進剪映時間軸：配樂、字幕、配音、轉場都幫你搭好，你只要打開剪映檢查、微調、匯出。</p>
+      <p class="lead" data-lang="en">Let Claude turn one sentence into a ready-to-edit JianYing (剪映) draft: it lays your clips on the timeline with music, captions, voice-over and transitions. You just open JianYing, review, tweak and export.</p>
+      <div class="meta">
+        <span>🧩 <a class="back" href="https://github.com/luoluoluo22/jianying-editor-skill" target="_blank" rel="noopener">luoluoluo22/jianying-editor-skill</a></span>
+        <span>💻 Windows</span>
+        <span>🕒 2026-10-12</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap doc">
+
+    <!-- ===================== 中文 ===================== -->
+    <div data-lang="zh">
+      <section>
+        <h2>整體流程</h2>
+        <ul class="flow">
+          <li>① 確認剪映</li><li>② 裝 Python／Git／FFmpeg</li><li>③ 安裝 Skill</li><li>④ 驗證讀到草稿</li><li>⑤ 一句話生成草稿</li><li>⑥ 剪映檢查＋匯出</li>
+        </ul>
+        <p style="margin-top:12px">這個 Skill 負責「自動幫你把時間軸搭好」，最後的預覽、渲染與匯出仍然在剪映裡完成。</p>
+      </section>
+
+      <section>
+        <h2>前提確認</h2>
+        <ol>
+          <li>電腦要安裝<strong>「剪映專業版」</strong>（中國國內版電腦版，從 <a href="https://www.jianying.com" target="_blank" rel="noopener">jianying.com</a> 下載）。<strong>CapCut 國際版和手機版都不支援。</strong></li>
+          <li>剪映裡至少要有<strong>一個草稿</strong>。沒有的話，先打開剪映建一個空白草稿。</li>
+          <li>使用 <strong>Claude 桌面版</strong>，並開「本機」工作階段（雲端工作階段碰不到你電腦裡的剪映）。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2><span class="step-no">1</span>檢查並補裝 Python、Git、FFmpeg</h2>
+        <p>打開 PowerShell，先檢查：</p>
+        <pre><code>python --version; git --version</code></pre>
+        <p>如果有缺，執行下面這行補裝：</p>
+        <pre><code>winget install Python.Python.3.12 Git.Git Gyan.FFmpeg</code></pre>
+        <p class="note">裝完一定要<strong>把 PowerShell 關掉重開</strong>，新的路徑才會生效。</p>
+      </section>
+
+      <section>
+        <h2><span class="step-no">2</span>安裝 Skill（手動、安全版）</h2>
+        <p class="note">⚠️ <strong>不要使用 README 裡的 <code>irm ... | iex</code> 一鍵安裝</strong>。它用短網址下載腳本後直接執行，內容不透明。請用下面的手動方式。</p>
+        <pre><code>git clone https://github.com/luoluoluo22/jianying-editor-skill.git "$env:USERPROFILE\.claude\skills\jianying-editor"
+cd "$env:USERPROFILE\.claude\skills\jianying-editor"
+git checkout 32c56928ded4f9e2c2b80e099dc7abb793d2c30b
+(Get-Content requirements.txt) -replace '==.*','' | Set-Content req-loose.txt
+python -m pip install -r req-loose.txt
+python -m playwright install chromium</code></pre>
+        <h3>每一行在做什麼</h3>
+        <ul>
+          <li><code>git clone</code>：把 Skill 下載到 Claude 的技能資料夾 <code>~\.claude\skills\jianying-editor</code>，Claude 才找得到它。</li>
+          <li><code>git checkout 32c5692…</code>：<strong>鎖定在 v1.7 這個已檢查過的版本</strong>，避免作者之後的更新內容未經檢查就被執行。</li>
+          <li><code>req-loose.txt</code>：把 requirements 的版本鎖定拿掉，避免較新的 Python（例如 3.14）找不到相容套件。</li>
+          <li><code>pip install</code>：安裝 Skill 需要的 Python 套件。</li>
+          <li><code>playwright install chromium</code>：安裝「網頁動效轉影片」錄屏用的瀏覽器。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="step-no">3</span>驗證有沒有讀到剪映</h2>
+        <p>還在同一個資料夾裡，執行：</p>
+        <pre><code>python scripts\draft_inspector.py list --limit 5</code></pre>
+        <p class="ok">✅ 有列出剪映的草稿名稱，就是安裝成功。</p>
+        <p>如果出錯：把完整錯誤訊息貼給 Claude，請它幫你排除。常見原因是剪映裡還沒有任何草稿、裝的是 CapCut 而不是剪映專業版，或補裝完沒重開 PowerShell。</p>
+      </section>
+
+      <section>
+        <h2><span class="step-no">4</span>之後怎麼使用</h2>
+        <ol>
+          <li>在 Claude 桌面版開一個<strong>「本機」</strong>工作階段（不要用雲端）。</li>
+          <li>工作資料夾選<strong>放素材的資料夾</strong>。</li>
+          <li>直接說需求，例如：</li>
+        </ol>
+        <pre><code>用 jianying-editor 技能，把這個資料夾的素材剪成一支 1 分鐘的精華影片，
+配輕快音樂、加字幕，草稿命名「測試1」</code></pre>
+        <p>完成後打開剪映就會看到新草稿，檢查、微調後再匯出。</p>
+        <h3>電商怎麼用</h3>
+        <ul>
+          <li>把一批商品實拍片段，一句話剪成 15～60 秒的開箱／新品短影音草稿。</li>
+          <li>寫好文案，讓它自動配音＋逐句對字幕，量產 Reels、抖音、蝦皮短影音。</li>
+          <li>同一批素材改說「換成 30 秒版本、改成直式」，快速做出多個版本測廣告。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>已知限制</h2>
+        <ul>
+          <li><strong>只生成剪映草稿</strong>，最後要在剪映裡檢查和匯出。</li>
+          <li><strong>自動匯出靠 UI 自動化</strong>：剪映 5.9 以下最穩；新版剪映可能失敗，失敗就手動按匯出。執行自動匯出時<strong>不要動鍵盤滑鼠</strong>。</li>
+          <li>剪映內建的 AI 功能（智慧摳圖、美顏、語音辨識字幕、一鍵成片）<strong>叫不動</strong>。</li>
+          <li>相機 RAW 檔（例如 <code>.RAF</code>、<code>.CR3</code>、<code>.NEF</code>）剪映讀不了，要<strong>先轉成 JPG</strong>。</li>
+          <li>第一次建議<strong>只拿 10 到 20 個素材</strong>測試。</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ===================== English ===================== -->
+    <div data-lang="en">
+      <section>
+        <h2>The workflow at a glance</h2>
+        <ul class="flow">
+          <li>① Check JianYing</li><li>② Install Python / Git / FFmpeg</li><li>③ Install the skill</li><li>④ Verify drafts are found</li><li>⑤ One sentence → draft</li><li>⑥ Review & export in JianYing</li>
+        </ul>
+        <p style="margin-top:12px">The skill builds the timeline for you; previewing, rendering and exporting still happen inside JianYing.</p>
+      </section>
+
+      <section>
+        <h2>Before you start</h2>
+        <ol>
+          <li>Install <strong>JianYing Pro (剪映专业版)</strong>, the mainland-China desktop app from <a href="https://www.jianying.com" target="_blank" rel="noopener">jianying.com</a>. <strong>CapCut (international) and the mobile app are not supported.</strong></li>
+          <li>JianYing must contain <strong>at least one draft</strong>. If it has none, open JianYing and create an empty one.</li>
+          <li>Use the <strong>Claude desktop app</strong> with a <strong>local</strong> session (a cloud session can't reach JianYing on your PC).</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2><span class="step-no">1</span>Check for Python, Git and FFmpeg</h2>
+        <p>Open PowerShell and check:</p>
+        <pre><code>python --version; git --version</code></pre>
+        <p>If anything is missing, install it:</p>
+        <pre><code>winget install Python.Python.3.12 Git.Git Gyan.FFmpeg</code></pre>
+        <p class="note">Afterwards, <strong>close and reopen PowerShell</strong> so the new PATH takes effect.</p>
+      </section>
+
+      <section>
+        <h2><span class="step-no">2</span>Install the skill (manual, safer method)</h2>
+        <p class="note">⚠️ <strong>Do not use the README's <code>irm ... | iex</code> one-liner.</strong> It downloads a script from a short link and runs it immediately, so you can't see what it does. Use the manual steps below.</p>
+        <pre><code>git clone https://github.com/luoluoluo22/jianying-editor-skill.git "$env:USERPROFILE\.claude\skills\jianying-editor"
+cd "$env:USERPROFILE\.claude\skills\jianying-editor"
+git checkout 32c56928ded4f9e2c2b80e099dc7abb793d2c30b
+(Get-Content requirements.txt) -replace '==.*','' | Set-Content req-loose.txt
+python -m pip install -r req-loose.txt
+python -m playwright install chromium</code></pre>
+        <h3>What each line does</h3>
+        <ul>
+          <li><code>git clone</code>: downloads the skill into Claude's skills folder, <code>~\.claude\skills\jianying-editor</code>, so Claude can find it.</li>
+          <li><code>git checkout 32c5692…</code>: <strong>pins the reviewed v1.7 commit</strong>, so later upstream changes don't run unreviewed.</li>
+          <li><code>req-loose.txt</code>: strips version pins from requirements so newer Pythons (e.g. 3.14) can still find compatible packages.</li>
+          <li><code>pip install</code>: installs the Python packages the skill needs.</li>
+          <li><code>playwright install chromium</code>: installs the browser used to record web animations as video.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="step-no">3</span>Verify it can see JianYing</h2>
+        <p>From the same folder, run:</p>
+        <pre><code>python scripts\draft_inspector.py list --limit 5</code></pre>
+        <p class="ok">✅ If it lists your JianYing draft names, the install worked.</p>
+        <p>If it errors, paste the full message to Claude and ask it to troubleshoot. Common causes: no drafts in JianYing yet, CapCut installed instead of JianYing Pro, or PowerShell not reopened after installing.</p>
+      </section>
+
+      <section>
+        <h2><span class="step-no">4</span>Using it</h2>
+        <ol>
+          <li>In the Claude desktop app, start a <strong>local</strong> session (not cloud).</li>
+          <li>Pick the <strong>folder that holds your footage</strong> as the working folder.</li>
+          <li>Describe what you want, for example:</li>
+        </ol>
+        <pre><code>Use the jianying-editor skill to cut the footage in this folder into a
+1-minute highlight video with upbeat music and captions. Name the draft "Test1".</code></pre>
+        <p>Open JianYing afterwards and the new draft is there. Review, tweak, then export.</p>
+        <h3>For sellers</h3>
+        <ul>
+          <li>Turn a batch of product clips into a 15–60s unboxing or launch video draft with one sentence.</li>
+          <li>Write the script and let it add voice-over plus line-by-line captions to mass-produce Reels and short-form ads.</li>
+          <li>Ask for "a 30-second vertical version" of the same footage to spin up ad variants for testing.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Known limitations</h2>
+        <ul>
+          <li><strong>It only creates JianYing drafts</strong>; you still review and export in JianYing.</li>
+          <li><strong>Auto-export relies on UI automation</strong>: most reliable on JianYing 5.9 or earlier; newer versions may fail, so just click Export yourself. <strong>Don't touch the keyboard or mouse</strong> while auto-export runs.</li>
+          <li>JianYing's built-in AI features (smart cutout, beauty filters, speech-to-caption, one-click video) <strong>can't be triggered</strong>.</li>
+          <li>Camera RAW files (e.g. <code>.RAF</code>, <code>.CR3</code>, <code>.NEF</code>) can't be read by JianYing; <strong>convert to JPG first</strong>.</li>
+          <li>For your first run, <strong>test with only 10 to 20 clips</strong>.</li>
+        </ul>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p data-lang="zh">© 電商神助手．講師 大軍．本大禮包僅供學員學習使用。</p>
+      <p data-lang="en">© E-commerce Genie (電商神助手) · Instructor 大軍 · For enrolled students.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var lang = 'zh';
+      try { var s = localStorage.getItem('lang'); if (s === 'zh' || s === 'en') lang = s; } catch (e) {}
+      var btn = document.getElementById('langBtn');
+      function apply() {
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+        document.title = lang === 'zh' ? '剪映自動剪輯 Skill 教學｜電商神助手' : 'JianYing Auto-Editing Skill Guide | E-commerce Genie';
+        btn.textContent = lang === 'zh' ? 'EN' : '中文';
+      }
+      btn.addEventListener('click', function () {
+        lang = lang === 'zh' ? 'en' : 'zh';
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+        apply();
+      });
+      apply();
+    })();
+  </script>
+</body>
+</html>

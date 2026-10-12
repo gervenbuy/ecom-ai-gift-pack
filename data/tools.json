@@ -248,6 +248,16 @@
       "updated": "2026-10-04",
       "zh": { "summary": "RunningHub 是雲端 ComfyUI 平台，不用裝顯卡就能在瀏覽器一鍵執行別人做好的 AI 工作流；這個工作流可自動產出音樂 MV，據作者說跑一次成本約新台幣 5 元。", "use": "把歌曲或品牌主題曲快速做成 MV 短片，當新品宣傳、Reels／短影音素材。" },
       "en": { "summary": "RunningHub is a cloud ComfyUI platform that runs ready-made AI workflows in the browser, no GPU needed; this workflow auto-generates music videos, about NT$5 per run according to its author.", "use": "Turn a song or brand jingle into an MV-style clip for launches, Reels and short-form ads." }
+    },
+    {
+      "name": "剪映自動剪輯 Skill（jianying-editor）",
+      "category": "video",
+      "url": "https://github.com/luoluoluo22/jianying-editor-skill",
+      "guide": "guides/jianying-editor-skill.html",
+      "pricing": "opensource",
+      "updated": "2026-10-12",
+      "zh": { "summary": "GitHub 上熱門的開源 Claude Skill：對 Claude 說一句話，就自動在「剪映專業版」生成剪輯草稿，素材排列、配樂、字幕、AI 配音、轉場都幫你搭好，再到剪映檢查匯出。只支援電腦版剪映專業版（國內版），CapCut 與手機版不支援。", "use": "把商品實拍素材一句話剪成開箱、新品短影音草稿，再快速做出不同長度的版本測廣告。完整步驟請點「安裝教學」。" },
+      "en": { "summary": "A popular open-source Claude skill: describe the video in one sentence and Claude builds a draft in JianYing Pro (剪映专业版) with clips, music, captions, AI voice-over and transitions laid out, ready to review and export. Desktop JianYing Pro (mainland-China version) only; CapCut and mobile are not supported.", "use": "Turn raw product footage into unboxing or launch short-video drafts in one sentence, then spin up different lengths for ad tests. See the install guide for full steps." }
     }
   ]
 }

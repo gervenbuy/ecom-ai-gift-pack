@@ -12,6 +12,7 @@
       all: '全部',
       use: '電商怎麼用：',
       visit: '前往官網 →',
+      guide: '📘 安裝教學',
       empty: '找不到符合的工具，換個關鍵字試試。',
       footer1: '© 電商神助手．講師 大軍．本大禮包僅供學員學習使用。',
       footer2: '價格與功能以各工具官網為準，本表會持續更新。',
@@ -31,6 +32,7 @@
       all: 'All',
       use: 'For sellers: ',
       visit: 'Visit site →',
+      guide: '📘 Install guide',
       empty: 'No matching tools. Try another keyword.',
       footer1: '© E-commerce Genie (電商神助手) · Instructor 大軍 · For enrolled students.',
       footer2: 'Prices and features follow each tool\'s official site. This list is updated regularly.',
@@ -108,7 +110,9 @@
         '<p class="summary">' + esc(L.summary) + '</p>' +
         '<p class="use"><strong>' + t.use + '</strong>' + esc(L.use) + '</p>' +
         '<div class="card-foot"><span>' + esc(x.updated) + '</span>' +
-        '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + t.visit + '</a></div>' +
+        '<span class="links">' +
+        (x.guide ? '<a href="' + esc(x.guide) + '">' + t.guide + '</a>' : '') +
+        '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + t.visit + '</a></span></div>' +
         '</article>';
     }).join('');
   }
