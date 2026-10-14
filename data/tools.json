@@ -133,6 +133,24 @@
       "en": { "summary": "AI image generator that renders text inside images accurately.", "use": "Promo posters, coupons and social cards with slogans." }
     },
     {
+      "name": "Blender（3D 建模）",
+      "category": "image",
+      "url": "https://www.blender.org",
+      "pricing": "opensource",
+      "updated": "2026-10-14",
+      "zh": { "summary": "免費開源的專業 3D 軟體，建模、材質、打光、算圖、動畫一套全包，Windows／Mac／Linux 都能用，YouTube 上中文教學非常多。做好的模型可匯出 GLB／glTF 格式，直接給 three.js 放上網頁。上手門檻比 AI 工具高，建議從「做一個簡單商品模型」開始練。", "use": "把商品做成 3D 模型，算出白底圖、情境圖、360 度旋轉影片，不用每次找攝影棚；換顏色、換包裝只要改材質就能出新圖；再匯出 GLB 檔給 three.js 做成網頁上可旋轉的 3D 商品展示。" },
+      "en": { "summary": "Free, open-source professional 3D suite covering modeling, materials, lighting, rendering and animation on Windows, Mac and Linux, with tons of tutorials online. Export models as GLB/glTF to drop straight into three.js. Steeper learning curve than AI tools, so start by modeling one simple product.", "use": "Model your products once, then render white-background shots, lifestyle scenes and 360° spin videos without a photo studio; swap colors or packaging by changing materials; export GLB for an interactive 3D product viewer built with three.js." }
+    },
+    {
+      "name": "three.js（網頁 3D 互動）",
+      "category": "image",
+      "url": "https://threejs.org",
+      "pricing": "opensource",
+      "updated": "2026-10-14",
+      "zh": { "summary": "免費開源的 JavaScript 函式庫，把 3D 模型放到網頁上，加上滑鼠拖曳旋轉、縮放、點擊切換顏色等互動，手機和電腦瀏覽器都能看，不用裝任何 App。需要寫程式，但可以請 Claude 等 AI 幫你寫，小型專案用 Claude Pro 的額度就夠。常見工作流：Blender 建模 → 匯出 GLB → three.js 做成網頁 → AI 幫忙寫程式碼。", "use": "做可 360 度旋轉的 3D 商品展示頁、選顏色／選配件的商品配置器，嵌進官網或一頁式銷售頁提高轉換；也能做成簡單的網頁介面給老闆或客戶直接用瀏覽器看樣品。" },
+      "en": { "summary": "Free, open-source JavaScript library for putting 3D models on a web page with drag-to-rotate, zoom and click interactions, viewable in any desktop or mobile browser with no app install. It takes code, but an AI like Claude can write it for you; a Claude Pro plan is plenty for small projects. Typical workflow: model in Blender, export GLB, build the page in three.js, let AI write the code.", "use": "Build 360° rotatable product viewers and color/accessory configurators to embed in your store or landing page and lift conversions; or a simple web UI so your boss or clients can review samples right in the browser." }
+    },
+    {
       "name": "CapCut 剪映",
       "category": "video",
       "url": "https://www.capcut.com",
