@@ -6,7 +6,8 @@
     { "id": "video", "zh": "影片製作", "en": "Video", "icon": "🎬" },
     { "id": "audio", "zh": "配音與音樂", "en": "Voice & Music", "icon": "🎙️" },
     { "id": "docs", "zh": "簡報與知識整理", "en": "Slides & Research", "icon": "📑" },
-    { "id": "automation", "zh": "自動化與客服", "en": "Automation & Support", "icon": "⚙️" }
+    { "id": "automation", "zh": "自動化與客服", "en": "Automation & Support", "icon": "⚙️" },
+    { "id": "advanced", "zh": "進階玩家", "en": "Advanced", "icon": "🚀" }
   ],
   "pricing": {
     "free": { "zh": "免費", "en": "Free" },
@@ -258,6 +259,15 @@
       "updated": "2026-10-12",
       "zh": { "summary": "GitHub 上熱門的開源 Claude Skill：對 Claude 說一句話，就自動在「剪映專業版」生成剪輯草稿，素材排列、配樂、字幕、AI 配音、轉場都幫你搭好，再到剪映檢查匯出。只支援電腦版剪映專業版（國內版），CapCut 與手機版不支援。", "use": "把商品實拍素材一句話剪成開箱、新品短影音草稿，再快速做出不同長度的版本測廣告。完整步驟請點「安裝教學」。" },
       "en": { "summary": "A popular open-source Claude skill: describe the video in one sentence and Claude builds a draft in JianYing Pro (剪映专业版) with clips, music, captions, AI voice-over and transitions laid out, ready to review and export. Desktop JianYing Pro (mainland-China version) only; CapCut and mobile are not supported.", "use": "Turn raw product footage into unboxing or launch short-video drafts in one sentence, then spin up different lengths for ad tests. See the install guide for full steps." }
+    },
+    {
+      "name": "Strata（本機跑大型 AI）",
+      "category": "advanced",
+      "url": "https://github.com/Niko1221/Strata",
+      "pricing": "opensource",
+      "updated": "2026-10-14",
+      "zh": { "summary": "免費開源工具，讓你在自己的電競電腦上離線跑 1250 億參數的大型 AI 模型（Qwen3.8-Flash-Next），能聊天、寫文案、寫程式、看圖，資料完全不出你的電腦，還提供 OpenAI／Anthropic 相容 API 讓其他工具串接。硬體門檻：顯卡 12GB 以上、記憶體 32GB 起（64GB 最順）、硬碟約 80GB。中文請選 Q2_0 或 IQ2_XS 版本。", "use": "大量生成商品描述、廣告文案、SEO 標題不用付 API 費；處理顧客名單、訂單、評價等敏感資料不上雲；當 n8n／Make 自動化或客服機器人背後的 AI 引擎。適合有電競電腦的進階學員。" },
+      "en": { "summary": "Free, open-source engine that runs a 125B-parameter model (Qwen3.8-Flash-Next) offline on your own gaming PC: chat, copywriting, coding and image understanding, with nothing leaving your machine, plus an OpenAI/Anthropic-compatible API for other tools. Needs a 12 GB+ GPU, 32 GB+ RAM (64 GB ideal) and about 80 GB of disk. For Chinese, pick the Q2_0 or IQ2_XS build.", "use": "Generate product descriptions, ad copy and SEO titles in bulk with no API fees; process customer lists, orders and reviews without sending them to the cloud; power n8n/Make automations or support bots. For advanced students with a gaming PC." }
     }
   ]
 }
